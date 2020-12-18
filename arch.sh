@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 
-sudo pacman -Syu  code php base-devel yaourt git wget yajl jdk-openjdk  intellij-idea-community-edition firefox
+sudo pacman -Syu  atom  php base-devel  jdk-openjdk  intellij-idea-community-edition firefox chromium 
 
 
-pamac install google-chrome 
+apm install terminal-tab sync-settings seti-icons script php-debug minimap linter linter-php ide-php goto-definition emmet debug autoclose-html atom-beautify atom-autocomplete-php
+
+ 
+
 
 
