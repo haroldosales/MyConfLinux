@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+echo Install pacman
+sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc
+echo Install Pamac
+pamac install google-chrome visual-studio-code-bin 
 
-sudo pacman -Syu    php base-devel  jdk-openjdk  intellij-idea-community-edition firefox  postgresql pgadmin
-
-apm install terminal-tab sync-settings seti-icons script php-debug minimap linter linter-php ide-php goto-definition emmet debug autoclose-html atom-beautify atom-autocomplete-php atom-live-server
 
 # su passwd postgres
 
