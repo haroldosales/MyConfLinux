@@ -42,8 +42,8 @@ MENSAGEM_USO="
 
       -h - Menu de ajuda
       -v - Versão do programa
-      -s - Ordernar a saída
-      -m - Coloca em maiúsculo
+      -paman - install pacman
+      -pamac - install pamac
 "
 
 VERSAO="v1"
@@ -55,17 +55,15 @@ do
   case "$1" in
     -h) echo "$MENSAGEM_USO" && exit 0               ;;
     -v) echo "$VERSAO" && exit 0                     ;;
-    -s) echo "install pacman" && $INSTALLPACMAN=1                                ;;
-    -m) echo "install pamac" && $INSTALLPAMAC=1                            ;;
+    -s) echo "install pacman" && $INSTALLPACMAN      ;;
+    -m) echo "install pamac" && $INSTALLPAMAC        ;;
      *) echo "Opção inválida, valie o -h." && exit 1 ;;
   esac
   shift
 done
 
-[ $CHAVE_ORDENA -eq 1 ]    && USUARIOS=$(echo "$USUARIOS" | sort)
-[ $CHAVE_MAIUSCULO -eq 1 ] && USUARIOS=$(echo "$USUARIOS" | tr [a-z] [A-Z])
 
-echo "$USUARIOS"
+echo "complete"
 
 
 # ---------------------------------------------------------------#
