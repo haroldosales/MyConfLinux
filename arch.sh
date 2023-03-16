@@ -7,7 +7,7 @@
 #
 # ------------------------------------------------------------------------ #
 #  install program my personal
-#  
+#
 # ------------------------------------------------------------------------ #
 # Histórico:
 
@@ -22,7 +22,7 @@
 MENSAGEM="Install pacman"
 INSTALLPACMAN="sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc"
 MENSAGEM2="Install Pamac"
-INSTALLPAMAC="pamac install google-chrome visual-studio-code-bin" 
+INSTALLPAMAC="pamac install google-chrome visual-studio-code-insiders-bin"
 
 
 # ------------------------TESTE---------------------------------#
