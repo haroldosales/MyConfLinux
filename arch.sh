@@ -22,7 +22,7 @@
 MENSAGEM="Install pacman"
 INSTALLPACMAN="sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc"
 MENSAGEM2="Install Pamac"
-INSTALLPAMAC="pamac install google-chrome visual-studio-code-insiders-bin"
+INSTALLPAMAC="pamac install google-chrome visual-studio-code-insiders-bin spotify"
 
 
 # ------------------------TESTE---------------------------------#
@@ -42,8 +42,8 @@ MENSAGEM_USO="
 
       -h - Menu de ajuda
       -v - Versão do programa
-      -paman - install pacman
-      -pamac - install pamac
+      -s - install pacman
+      -m - install pamac
 "
 
 VERSAO="v1.5"
@@ -61,6 +61,7 @@ do
   esac
   shift
 done
+
 
 
 echo "complete"
