@@ -19,11 +19,6 @@
 
 # ------------------VARIAVEIS-----------------------------------#
 CREATESWAPFILE="SWAP FILE"
-SWAP=`sudo  swapoff /swapfile
-      sudo  dd if=/dev/zero of=/swapfile bs=1M count=14k status=progress
-	sudo  chmod 0600 /swapfile
-       sudo mkswap =U clear /swapfile
-      sudo swapon /swapfile`
 MENSAGEM="Install pacman"
 INSTALLPACMAN="sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc"
 MENSAGEM2="Install Pamac"
@@ -62,8 +57,7 @@ do
     -v) echo "$VERSAO" && exit 0                     ;;
     -s) echo "install pacman" && $INSTALLPACMAN      ;;
     -m) echo "install pamac" && $INSTALLPAMAC        ;;
-    -x) echo "SWAP" && $SWAP                         ;;
-     *) echo "Opção inválida, valie o -h." && exit 1 ;;
+       *) echo "Opção inválida, valie o -h." && exit 1 ;;
  
  esac
   shift
