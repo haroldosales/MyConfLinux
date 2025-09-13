@@ -1,7 +1,7 @@
 # MyConfigLinux
 
 Install arch Linux - 
- sasastep by step
+ step by step
 open terminal in vscode or system
 clone my repo
 for install pacman , you using -m 
