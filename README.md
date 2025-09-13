@@ -9,3 +9,4 @@ example
 ./arch.sh -m 
 for install pamac ,you using -s 
 ./arch.sh -s
+ol
