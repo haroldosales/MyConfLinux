@@ -18,9 +18,13 @@
 
 
 # ------------------VARIAVEIS-----------------------------------#
-CREATESWAPFILE="SWAP FILE"
+SWAP=`sudo  swapoff /swapfile
+      sudo  dd if=/dev/zero of=/swapfile bs=1M count=14k status=progress
+	sudo  chmod 0600 /swapfile
+       sudo mkswap -U clear /swapfile
+      sudo swapon /swapfile`
 MENSAGEM="Install pacman"
-INSTALLPACMAN="sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc"
+INSTALLPACMAN="sudo pacman -Syu php base-devel  jdk-openjdk  intellij-idea-community-edition nodejs npm discord git obs-studio vlc steam"
 MENSAGEM2="Install Pamac"
 INSTALLPAMAC="pamac install google-chrome visual-studio-code-insiders-bin spotify"
 
@@ -42,6 +46,7 @@ MENSAGEM_USO="
 
       -h - Menu de ajuda
       -v - Versão do programa
+      -n - create swap file
       -s - install pacman
       -m - install pamac
 "
@@ -55,6 +60,7 @@ do
   case "$1" in
     -h) echo "$MENSAGEM_USO" && exit 0               ;;
     -v) echo "$VERSAO" && exit 0                     ;;
+    -n) echo "create swap file" && $SWAP   ;; 
     -s) echo "install pacman" && $INSTALLPACMAN      ;;
     -m) echo "install pamac" && $INSTALLPAMAC        ;;
        *) echo "Opção inválida, valie o -h." && exit 1 ;;
